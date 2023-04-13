@@ -1,0 +1,76 @@
+<po-container>
+  <div class="text">
+    <p>Dono do Pet</p>
+  </div>
+<div class="owner">
+  <po-list-view p-property-title="name" [p-items]="items">
+    <ng-template p-list-view-content-template let-items>
+      <div class="po-row">
+        <po-info class="po-lg-4" p-label="Nome" [p-value]="items.name"></po-info>
+        <po-info class="po-lg-4" p-label="Telefone" [p-value]="items.phone"></po-info>
+        <po-info class="po-lg-4" p-label="Email" [p-value]="items.email"></po-info>
+      </div>
+    </ng-template>
+
+    <ng-template p-list-view-detail-template let-items [p-show-detail]="showDetail">
+      <div class="po-row">
+        <po-info class="po-lg-4" p-label="RG" [p-value]="items.rg"></po-info>
+        <po-info class="po-lg-4" p-label="CPF" [p-value]="items.cpf"></po-info>
+        <po-info class="po-lg-4" p-label=" Data de nascimento" [p-value]="items.birthDate"></po-info>
+        <po-info class="po-md-4" p-label="Age" [p-value]="items.name"></po-info>
+        <po-info class="po-md-4" p-label="City" [p-value]="items.id"></po-info>
+      </div>
+    </ng-template>
+  </po-list-view>
+</div>
+</po-container>
+<po-container>
+  <div class="text">
+    <p>Pet</p>
+  </div>
+<div class="pet">
+  <po-list-view p-property-title="name" [p-items]="pets">
+    <ng-template p-list-view-content-template let-pets>
+      <div class="po-row">
+        <po-info class="po-lg-4" p-label="Nome do Pet" [p-value]="pets.name"></po-info>
+        <po-info class="po-lg-4" p-label="Tipo" [p-value]="pets.type"></po-info>
+        <po-info class="po-lg-4" p-label="Raça" [p-value]="pets.breed"></po-info>
+      </div>
+    </ng-template>
+
+    <ng-template p-list-view-detail-template let-pets [p-show-detail]="showDetail">
+      <div class="po-row">
+        <po-info class="po-lg-6" p-label="Idade" [p-value]="pets.age"></po-info>
+        <po-info class="po-lg-6" p-label=" Data de nascimento" [p-value]="pets.birthDate"></po-info>
+      </div>
+    </ng-template>
+  </po-list-view>
+</div>
+</po-container>
+<!-- <div class="pet">
+  <po-list-view p-property-title="pet.name" [p-items]="items">
+    <ng-template p-list-view-content-template let-items>
+      <div class="po-row">
+        <po-info class="po-lg-4" p-label="Nome" [p-value]="items.name"></po-info>
+
+        <po-info class="po-lg-4" p-label="RG" [p-value]="items.rg"></po-info>
+
+        <po-info class="po-lg-4" p-label="CPF" [p-value]="items.cpf"></po-info>
+
+        <po-info class="po-lg-4" p-label="Email" [p-value]="items.email"></po-info>
+
+        <po-info class="po-lg-4" p-label="Telefone" [p-value]="items.phone"></po-info>
+
+        <po-info class="po-lg-4" p-label=" Data de nascimento" [p-value]="items.birthDate"></po-info>
+      </div>
+    </ng-template>
+
+    <ng-template p-list-view-detail-template let-items [p-show-detail]="showDetail">
+      <div class="po-row">
+        <po-info class="po-md-6" p-label="Age" [p-value]="items.name"></po-info>
+
+        <po-info class="po-md-6" p-label="City" [p-value]="items.id"></po-info>
+      </div>
+    </ng-template>
+  </po-list-view>
+</div> -->

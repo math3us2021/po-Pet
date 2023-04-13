@@ -1,0 +1,96 @@
+:root {
+
+  --color-brand-01-lightest: #f2eaf6
+  --color-brand-01-lighter: #d9c2e5
+  --color-brand-01-light: #50dcf7
+  --color-brand-01-base: #4cd1eb
+  --color-brand-01-dark: #3fafc4
+  --color-brand-01-darker: #3798ab
+  --color-brand-01-darkest: #037ec4
+  --color-brand-02-base: #b92f72
+  --color-brand-03-base: #ffd464
+  --color-neutral-dark-70: #4a5c60
+  --color-neutral-dark-80: #2c3739
+  --color-neutral-dark-90: #1d2426
+  --color-neutral-dark-95: #0b0e0e
+  --color-neutral-light-10: #eceeee
+  --color-neutral-light-20: #dadedf
+  --color-neutral-light-30: #b6bdbf
+  --color-neutral-light-00: #fff
+  --color-neutral-light-05: #fbfbfb
+  --color-neutral-mid-40: #9da7a9
+  --color-neutral-mid-60: #6e7c7f
+
+  --background-filter-home: #1a2230;
+  --background-map-filter-active: #e08100;
+  --color-white: #fff;
+  --color-text-light: #000000;
+  --color-text-gray: #707070;
+  --color-container-title: #4a5055;
+  --color-horizontal-bar: #193550;
+  --background-map: #48b5d4;
+  --color-button-color-link: #bfbfbf;
+  --color-text-blue: #147afc;
+  --color-hover-menu: #07e9ff;
+
+
+  --color-button-color: white;
+  --color-button-border-hover: rgba(20, 122, 252, 0.5);
+  --color-button-color-hover: rgba(13, 34, 61, 0.5);
+  --color-button-border: var(--color-text-blue);
+  --color-button-background-color: var(--color-text-blue);
+  --color-button-background-color-hover: var(--background-map);
+  --color-button-border-hover: rgba(20, 122, 252, 0.5);
+  --color-button-background-color-pressed: rgba(20, 122, 252, 0.5);
+  --color-button-border-pressed: rgba(20, 122, 252, 0.5);
+
+  
+}
+
+po-input,
+po-url,
+po-login,
+po-email,
+po-password,
+po-combo,
+po-lookup,
+po-decimal,
+po-number,
+po-multiselect,
+po-datepicker,
+po-datepicker-range,
+div.po-lookup-filter-content input.po-input,
+input.po-input {
+  --font-family: var(--font-family-theme);
+  --font-size: var(--font-size-default);
+  --text-color-placeholder: var(--color-neutral-light-60);
+  --color: var(--color-neutral-dark-70);
+  --background: var(--color-neutral-light-00);
+  --padding: 0 0.5rem;
+  --text-color: var(--color-neutral-dark-60);
+  --color-hover: var(--color-secondary-dark-20);
+  --background-hover: var(--color-brand-01-lightest);
+  --color-focused: var(--color-secondary);
+  --outline-color-focused:#037ec4;
+  --color-disabled: var(--color-neutral-light-60);
+  --background-disabled: var(--color-neutral-light-80);
+  --text-color-disabled: var(--color-neutral-dark-70);
+}
+
+:root {
+  --color-input-background-color-text: var(--background);
+  --color-input-border-text: var(--color-disabled);
+  --color-input-border-text-disabled: var(--background-disabled);
+  --color-input-border-text-focusable: var(--color-focused);
+  --color-input-border-text-error: var(--color-danger);
+  --color-input-color-disabled: var(--text-color-disabled);
+  --color-input-text-error: var(--color-danger);
+  --color-input-text-placeholder: var(--text-color-placeholder);
+
+  // --color-button-color: white;
+  // --color-button-background-color: #3fafc4;
+  // --color-button-background-color-hover: #086da7;
+  // --color-button-border-primary: #3fafc4;
+  // --color-button-border-color-hover: #086da7;
+
+}

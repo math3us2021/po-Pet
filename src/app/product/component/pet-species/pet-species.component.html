@@ -1,0 +1,19 @@
+<po-container>
+  <div class="text">
+    <p><strong>Escoha a espécie</strong></p>
+  </div>
+<div class="container po-m-1">
+  <div
+    *ngFor="let imagem of imagens "
+    [ngClass]="{
+      'clickFixed': imagem.id === selectedImageId,
+      'container': !setImg
+    }"
+    class="po-m-1"
+    #divImage>
+    <img class="imag" [src]="imagem.url"  [alt]="imagem.alt" (click)="setSpecie(imagem.id)"
+    [class.clickFixed]="imagem.id === selectedImageId"
+    >
+  </div>
+</div>
+</po-container>

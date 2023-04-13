@@ -1,0 +1,19 @@
+<div class="cont">
+  <div class="container">
+    <div class="logo">
+      <img src="assets/image/petz.jpg" alt="Logo" class="img">
+    <form #f="ngForm">
+      <div>
+        <po-input class="input" name="email" p-clean="true" p-required p-error="Email inválido" [(ngModel)]="email"
+          [p-pattern]="valid" [p-minlength]=5 p-placeholder="Digite seu email"></po-input>
+      </div>
+      <div>
+        <po-button p-label="Login" p-type="primary" p-size="large" p-icon="po-icon-login" (p-click)="onEmailChange()"
+          [p-disabled]="f.form.invalid"></po-button>
+      </div>
+    </form>
+    <div class="register">
+      <!-- <app-owner-create></app-owner-create> -->
+    </div>
+  </div>
+</div>

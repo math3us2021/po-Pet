@@ -1,26 +1,152 @@
-<!-- <po-modal #modal p-title="Cadastre-se para ter acesso ao PETZ!">
+<po-modal #modal p-title="Cadastre-se para ter acesso ao PETZ!">
   <po-container>
     <form #ownerForm="ngForm" (ngSubmit)="onSubmit(ownerForm)">
       <div>
         <po-input
+          class="po-xl-6"
           p-label="Nome"
-          [ngModel]="owner.name"
-          >
+          [(ngModel)]="owner.name"
+          name="name"
+          p-required
+          p-placeholder="Digite seu nome completo"
+          [p-maxlength]="50"
+          [p-minlength]="3"
+        >
         </po-input>
 
+        <po-input
+          class="po-xl-6"
+          p-label="Cpf"
+          [(ngModel)]="owner.cpf"
+          name="cpf"
+          p-required
+          p-placeholder="Digite seu cpf"
+          [p-mask]="cpfMask"
+          [minlength]="11"
+        >
+        </po-input>
+
+        <po-input
+          class="po-xl-3"
+          p-label="Rg"
+          [(ngModel)]="owner.rg"
+          name="rg"
+          p-required
+          p-error="Nome inválido"
+          p-placeholder="Digite seu nome completo"
+          [p-mask]="rgMask"
+        >
+        </po-input>
+
+        <po-datepicker
+          class="po-xl-5"
+          name="birthDate"
+          p-label="Data de nascimento"
+          [(ngModel)]="owner.birthDate"
+        >
+        </po-datepicker>
+        <po-input
+          class="po-xl-3"
+          p-label="Telefone"
+          [(ngModel)]="owner.phone"
+          [p-mask]="phoneMask"
+          name="phone"
+          p-required
+        >
+        </po-input>
+        <po-input
+          p-label="Email"
+          [(ngModel)]="owner.email"
+          name="email"
+          p-error="Nome inválido"
+          p-placeholder="Digite seu nome completo"
+          >
+          <!-- p-required -->
+          <!-- [p-pattern]="valid" -->
+        </po-input>
+
+        <po-input
+          class="po-xl-3"
+          p-label="CEP"
+          [(ngModel)]="owner.address.zipCode"
+          name="zipCode"
+          p-required
+          [p-mask]="zipMask"
+          (p-blur)="getAddressByZipCode()"
+        >
+        </po-input>
+
+        <po-input
+          class="po-xl-6"
+          p-label="Rua"
+          [(ngModel)]="owner.address.street"
+          name="street"
+          p-required
+          p-placeholder="Nome da rua"
+          [minlength]="3"
+        >
+        </po-input>
+        <po-input
+          class="po-xl-2"
+          p-label="Numero"
+          [(ngModel)]="owner.address.number"
+          name="number"
+          p-required
+          type="number"
+          p-placeholder="Nome da rua"
+          [maxlength]="4"
+        >
+        </po-input>
+        <po-input
+          class="po-xl-4"
+          p-label="Complemento"
+          [(ngModel)]="owner.address.complement"
+          name="complement"
+          p-placeholder="Casa"
+          [minlength]="3"
+        >
+        </po-input>
+
+        <po-input
+          class="po-xl-6"
+          p-label="Cidade"
+          [(ngModel)]="owner.address.city"
+          name="city"
+          p-placeholder="Digite a cidade"
+        >
+        </po-input>
+
+        <po-select
+        class="po-xl-3"
+        name="state"
+        p-label="Estado"
+        [p-options]="optionsSelect"
+        [ngModel]="fieldLabel"
+        (p-change)="onChange($event)"
+        p-placeholder="Estado"
+        >
+      </po-select>
+
       </div>
 
+      <po-modal-footer [p-disabled-align]="false">
+        <po-button
 
-      <div>
-        <label for="rua">Rua</label>
-        <input type="text" name="rua" ngModel>
-      </div>
-      <button type="submit">Avançar</button>
+          type="submit"
+          class="po-ml-3 colorButton"
+          p-label="Avançar"
+          (p-click)="[onSubmit(ownerForm), modal.close()]"
+          ></po-button>
+          <!-- [p-disabled]="!ownerForm.valid" -->
+        <po-button
+          [p-danger]="true"
+          class="po-ml-3 colorButton"
+          p-label="Cancel"
+          (p-click)="modal.close()"
+        ></po-button>
+      </po-modal-footer>
     </form>
   </po-container>
-  <po-modal-footer [p-disabled-align]="false">
-    <po-button [p-danger]="true" class="po-ml-3 colorButton" p-label="Cancel" (p-click)="modal.close()"></po-button>
-  </po-modal-footer>
 </po-modal>
 
-<p class="register" p-label="Cadastre-se" (click)="modal.open()">Cadastre-se</p> -->
+<p class="register" p-label="Cadastre-se" (click)="modal.open()">Cadastre-se</p>

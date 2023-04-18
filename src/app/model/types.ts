@@ -19,8 +19,7 @@ export type Owner = {
   address: {
     street: string,
     number: number,
-    complement: string,
-    district: string,
+    complement?: string,
     city: string,
     state: string,
     zipCode: string,

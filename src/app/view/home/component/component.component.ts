@@ -11,7 +11,7 @@ export class HomeComponent {
     text: 'Detalhes do Pet',
     text2: 'Orientações',
     text3: 'Cadastrar Pet',
-    text4: 'Dados Veterinário',
+    text4: 'Programar Alimentador',
   };
 
   constructor(

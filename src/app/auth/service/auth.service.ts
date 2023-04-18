@@ -71,4 +71,18 @@ export class AuthService implements OnDestroy {
   getCep(cep: string): Observable<any> {
     return this.http.get<any>(`https://viacep.com.br/ws/${cep}/json/`);
   }
+
+  createOwner(owner: Owner): Observable<Owner> {
+    return this.http.post<Owner>(this.url, owner).pipe(
+      map((obj) => {
+        this.poNotification.success({
+          message: `Cadastro realizado com sucesso!`,
+          actionLabel: 'OK',
+          duration: 2000,
+        });
+        return obj;
+      }),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
 }

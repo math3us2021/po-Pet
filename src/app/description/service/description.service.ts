@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { EMPTY, Observable, catchError, map } from 'rxjs';
+import { BehaviorSubject, EMPTY, Observable, catchError, map } from 'rxjs';
 import { Owner } from 'src/app/model/types';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DescriptionService {
+  // teste: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
+
 
   constructor(
     private http: HttpClient

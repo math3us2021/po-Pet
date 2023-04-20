@@ -26,4 +26,8 @@ export class HomeComponent {
   registerPet(){
     this.router.navigate(['/product']);
   }
+
+  feeder(){
+    this.router.navigate(['/feeder']);
+  }
 }

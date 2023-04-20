@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../service/auth.service';
 import { Subscription } from 'rxjs';
@@ -12,6 +12,7 @@ import { PoNotificationService } from '@po-ui/ng-components';
   styleUrls: ['./auth.component.sass']
 })
 export class AuthComponent {
+
   mySubscription: Subscription | undefined;
 
   email1(event: string) {
@@ -30,6 +31,5 @@ export class AuthComponent {
   onEmailChange() {
     this.authService.showMenu(this.email)
   }
-
 
 }

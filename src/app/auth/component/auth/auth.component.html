@@ -5,7 +5,9 @@
     <form #f="ngForm">
       <div>
         <po-input class="input" name="email" p-clean="true" p-required p-error="Email inválido" [(ngModel)]="email"
-          [p-pattern]="valid" [p-minlength]=5 p-placeholder="Digite seu email"></po-input>
+          [p-pattern]="valid" [p-minlength]=5 p-placeholder="Digite seu email">
+        </po-input>
+        
       </div>
       <div>
         <po-button p-label="Login" p-type="primary" p-size="large" p-icon="po-icon-login" (p-click)="onEmailChange()"

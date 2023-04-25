@@ -12,6 +12,7 @@ import { PoMenuModule } from '@po-ui/ng-components';
 import { HomeModule } from './view/home/home.module';
 import { DescriptionModule } from './description/description.module';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     PoMenuModule,
     HomeModule,
     DescriptionModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
